@@ -4,7 +4,7 @@ node ("master"){
         checkout scm
     }
     
-    echo "Branch name: " "${env.GIT_BRANCH}";
+    echo "Branch name: " "${env.BRANCH_NAME}";
     //echo "${env.GIT_BRANCH}";
     
     if(env.BRANCH_NAME == "prac-script1"){
