@@ -18,13 +18,9 @@ node ("master"){
     }
     */
     
-    def branchName = getCurrentBranch()
-    echo 'My branch Name is' + branchName
+    sayHello()
 }
 
-def getCurrentBranch () {
-    return sh (
-        script: 'git rev-parse --abbrev-ref HEAD',
-        returnStdout: true
-    ).trim()
+def sayHello () {
+    echo "Hello!!"
 }
