@@ -8,6 +8,11 @@ node ("master"){
         echo 'First Stage'
     }
     
+    stage('Checkout Code'){
+        checkout scm
+        echo "My branch is: ${env.BRANCH_NAME}"
+    }
+    
     
     /*
     if(env.BRANCH_NAME == "prac-script1"){
