@@ -1,6 +1,6 @@
 node ("master"){
     stage('Build'){
-        echo 'First Stage'
+        println 'First Stage'
         checkout scm
     }
     
