@@ -20,11 +20,11 @@ node ("master"){
     
     def branchName = getCurrentBranch()
     echo 'My branch Name is' + branchName
+}
 
-    def getCurrentBranch () {
+def getCurrentBranch () {
     return sh (
         script: 'git rev-parse --abbrev-ref HEAD',
         returnStdout: true
     ).trim()
-}
 }
