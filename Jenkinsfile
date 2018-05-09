@@ -3,8 +3,10 @@ node ("master"){
         echo 'First Stage'
         checkout scm
     }
+    GIT_BRANCH = sh(returnStdout: true, script: 'git rev-parse --abbrev-ref HEAD').trim()
     
-    echo "Branch name: " "${env.BRANCH_NAME}";
+    
+    echo "Branch name: " "${GIT_BRANCH}";
     //echo "${env.GIT_BRANCH}";
     
     if(env.BRANCH_NAME == "prac-script1"){
