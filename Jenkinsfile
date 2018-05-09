@@ -2,7 +2,7 @@ node ("master"){
     
     def BRANCHNAME=${env.BRANCH_NAME}
  
-    echo "Branch name: " ${BRANCHNAME}
+    //echo "Branch name: " ${BRANCHNAME}
     
     stage('Build'){
         echo 'First Stage'
