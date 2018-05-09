@@ -1,7 +1,9 @@
+#groovy
+
 node ("master"){
     
     stage('Build'){
-        println("First Stage");
+        println("First Stage..");
     }
     
     stage('Checkout Code'){
