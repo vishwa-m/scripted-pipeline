@@ -1,7 +1,7 @@
 node ("master"){
     
     stage('Build'){
-        echo 'First Stage'
+        System.out.println("First Stage");
     }
     
     stage('Checkout Code'){
