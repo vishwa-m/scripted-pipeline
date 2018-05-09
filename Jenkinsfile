@@ -4,6 +4,8 @@ node ("master"){
         checkout scm
     }
     
+    echo "Branch name: " env.BRANCH_NAME
+    
     if(env.BRANCH_NAME == "prac-script1"){
         echo "Branch name is master"
     }
