@@ -1,6 +1,6 @@
 node ("master"){
     
-    def BRANCHNAME=${env.BRANCH_NAME}
+    //def BRANCHNAME=${env.BRANCH_NAME}
  
     //echo "Branch name: " ${BRANCHNAME}
     
