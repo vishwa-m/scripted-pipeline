@@ -1,10 +1,8 @@
 #!groovy
 
 node{
-    
     stage('Checkout'){
             git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
-            
     }
     
     stage('Maven'){
@@ -77,15 +75,9 @@ node{
         false
     }*/
     
-    stage('clean'){
+    /*stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
-    }
-    
-    
-    //Not working
-    /*stage('parallel-jobs'){
-        parallel parallel-myJob1{build 'tenp1'}, parallel-myJob1{build 'temp2'} 
     }*/
     
     stage('parallel-jobs'){
