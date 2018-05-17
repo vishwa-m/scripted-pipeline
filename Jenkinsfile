@@ -77,10 +77,10 @@ node{
         false
     }*/
     
-    /*stage('clean'){
+    stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
-    }*/
+    }
     
     
     //Not working
