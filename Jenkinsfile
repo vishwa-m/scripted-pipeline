@@ -100,6 +100,12 @@ node{
         }
     }
     
+    stage('withEnv-stage'){
+        withEnv(["PATH+MAVEN=${tool 'M3.5'}/bin"]) {
+            sh "mvn --version"
+        }
+    }
+    
     stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
