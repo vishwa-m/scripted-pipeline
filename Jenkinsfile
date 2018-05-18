@@ -2,7 +2,7 @@
 
 node{
     stage('Checkout'){
-            git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
+            git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/scripted-pipeline.git', branch: 'prac-script1'
     }
     
     stage('Maven'){
