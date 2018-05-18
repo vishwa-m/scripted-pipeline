@@ -26,9 +26,9 @@ node{
     
     stage('dir'){
         dir('Notes'){// code in the dir block gets executed in the context of this directory
-            sh "pwd" // This prints the Notes pwd
+            pwd // This prints the Notes pwd
         }
-        sh "pwd" // This prints the job's directory
+        pwd // This prints the job's directory
     }
     
     stage('fileExists'){
