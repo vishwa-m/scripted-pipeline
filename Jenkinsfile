@@ -96,7 +96,7 @@ node{
         */
         timeout(time:30, unit:'SECONDS'){
             echo 'Hello'
-            sleep time:31, unit: 'SECONDS'
+            sleep time:25, unit: 'SECONDS' // If the sleep time is more than 30 secs then the build will fail as the time out is 30secs.
         }
     }
     
