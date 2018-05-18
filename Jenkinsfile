@@ -108,7 +108,7 @@ node{
             sh "mvn --version"
         }*/
         
-         withEnv("PATH+MAVEN=${tool 'M3.5'}/bin") {
+        withEnv(["${tool 'M3.5'}/bin"]) {
             sh "mvn --version"
         }
     }
