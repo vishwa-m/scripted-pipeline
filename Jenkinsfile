@@ -12,7 +12,7 @@ node{
     
     stage('Maven'){
         sh "/opt/apache-maven-3.5.0/bin/mvn -version"
-        echo "${maven}"
+        echo "${maven}/bin/mvn -version"
     }
     
     stage('sleep'){
