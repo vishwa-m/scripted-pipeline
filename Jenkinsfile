@@ -97,9 +97,9 @@ node{
         When we use timeout block then, the code in this block needs to be executed with in specified time 
         otherwise the build will fail
         */
-        timeout(time:30, unit:'SECONDS'){
+        timeout(time:5, unit:'SECONDS'){
             echo 'Hello'
-            sleep time:25, unit: 'SECONDS' // If the sleep time is more than 30 secs then the build will fail as the time out is 30secs.
+            sleep time:4, unit: 'SECONDS' // If the sleep time is more than 30 secs then the build will fail as the time out is 30secs.
         }
     }
     
