@@ -60,7 +60,7 @@ node{
         def text = ''
         //text = readFile 'sample.txt'
         /******* OR ******/
-        dir('Notes') {
+        dir('.') {// code in this block gets executed in the context of the current dir. Other ex: dir('MyFolder')
             text=readFile 'sample.txt'
         }
         echo text
