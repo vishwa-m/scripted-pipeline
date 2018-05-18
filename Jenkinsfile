@@ -58,10 +58,10 @@ node{
     
     stage('readfile'){
         def text = ''
-        //text = readFile 'Notes/Readme.txt'
+        //text = readFile 'sample.txt'
         /******* OR ******/
         dir('Notes') {
-            text=readFile 'Readme.txt'
+            text=readFile 'sample.txt'
         }
         echo text
     }
