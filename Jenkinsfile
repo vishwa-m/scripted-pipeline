@@ -96,6 +96,7 @@ node{
         */
         timeout(time:30, unit:'SECONDS'){
             echo 'Hello'
+            sleep time:31, unit: 'SECONDS'
         }
     }
     
