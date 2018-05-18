@@ -1,9 +1,9 @@
 #!groovy
 
 node{
-    stage('Checkout'){
-            git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
-    }
+    /*stage('Checkout'){
+            //git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
+    }*/
     
     stage('Maven'){
             sh "/opt/apache-maven-3.5.0/bin/mvn -version"
@@ -75,17 +75,17 @@ node{
         false
     }*/
     
-    /*stage('clean'){
-        sh "pwd"
-        deleteDir()// It deletes the working directory of the current job
-    }*/
-    
     stage('parallel-jobs'){
     parallel 'task1':{
             build 'temp1'
         }, 'task2':{
             build 'temp2'
         }
+    }
+    
+    stage('clean'){
+        sh "pwd"
+        deleteDir()// It deletes the working directory of the current job
     }
 
     /*stage('error'){
