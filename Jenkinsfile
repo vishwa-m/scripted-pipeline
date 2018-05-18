@@ -104,7 +104,7 @@ node{
     
     stage('stash-stage'){
         stash includes: 'sample.txt', name: 'stash1' // 'stash1' will be generated under "JENKINS_HOME/jobs/<name of jenikins job>/builds/<build number>/stashes" folder
-        sleep time:1, units:'MINUTES'
+        sleep time:1, unit:'MINUTES'
         unstash 'stash1' // 'stash1' will be deleted
         
     }
