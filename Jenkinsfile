@@ -1,7 +1,7 @@
 #!groovy
 
 node{
-    def Maven_HOME=tool 'M3.5'
+    def maven=tool 'M3.5'
     stage('Checkout'){
             //git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/scripted-pipeline.git', branch: 'prac-script1'
                     
@@ -11,7 +11,8 @@ node{
     }
     
     stage('Maven'){
-            sh "/opt/apache-maven-3.5.0/bin/mvn -version"
+        sh "/opt/apache-maven-3.5.0/bin/mvn -version"
+        sh '${maven}/bin'
     }
     
     stage('sleep'){
