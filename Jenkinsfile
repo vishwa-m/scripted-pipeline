@@ -2,7 +2,11 @@
 
 node{
     stage('Checkout'){
-            git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/scripted-pipeline.git', branch: 'prac-script1'
+            //git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/scripted-pipeline.git', branch: 'prac-script1'
+                    
+            /**********  OR **********/    
+        
+            checkout scm
     }
     
     stage('Maven'){
