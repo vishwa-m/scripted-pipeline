@@ -81,8 +81,17 @@ node{
     
     stage('parallel-jobs'){
     parallel 'task1':{
-            build 'temp1'
-        }, 'task2':{
+        
+        /* 
+        We can run different parallel tasks on different nodes also. Here this task runs on master node.
+        If no node is mentioned then by default it uses the default node.
+        */
+        
+        node('master'){         
+                build 'temp1'
+        }
+        
+        }, 'task2':{            
             build 'temp2'
         }
     }
