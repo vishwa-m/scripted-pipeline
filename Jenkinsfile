@@ -104,7 +104,12 @@ node{
     }
     
     stage('withEnv-stage'){
-        withEnv(["PATH+MAVEN=${tool 'M3.5'}/bin"]) {
+        /*withEnv(["PATH+MAVEN=${tool 'M3.5'}/bin"]) {
+            sh "mvn --version"
+        }*/
+        
+        withEnv("${tool 'M3.5'}/bin") {
+            echo "--------"
             sh "mvn --version"
         }
     }
