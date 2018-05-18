@@ -115,7 +115,7 @@ node{
         error 'Error'// simillar to throw new Exception(), but this step will avoid printing a stack trace.
     }*/
     
-    /*stage('retry'){
+    stage('retry'){
         try{
             build 'error-job'
         }
@@ -125,5 +125,5 @@ node{
                 build 'error-job'
             }
         }
-    }*/
+    }
 }
