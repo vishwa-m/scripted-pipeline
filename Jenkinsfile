@@ -11,8 +11,8 @@ node{
     }
     
     stage('Maven'){
-        sh "/opt/apache-maven-3.5.0/mvn -version"
-        sh '${maven}/bin'
+        sh "/opt/apache-maven-3.5.0/bin/mvn -version"
+        sh '${maven}/bin/mvn -version'
     }
     
     stage('sleep'){
