@@ -89,6 +89,16 @@ node{
         }
     }
     
+    stage('timeout-stage'){
+        /*
+        When we use timeout block then, the code in this block needs to be executed with in specified time 
+        otherwise the build will fail
+        */
+        timeout(time:30, unit:'SECONDS'){
+            echo 'Hello'
+        }
+    }
+    
     stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
