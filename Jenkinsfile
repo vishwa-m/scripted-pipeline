@@ -22,7 +22,6 @@ node{
     
     stage('echo'){
         echo 'Hi VNath'
-        
     }
     
     stage('dir'){
@@ -103,10 +102,14 @@ node{
         }
     }
     
-    stage('clean'){
+    stage('stash-stage'){
+        stash includes: 'sample.txt', name: 'stash1'
+    }
+    
+    /*stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
-    }
+    }*/
 
     /*stage('error'){
         error 'Error'// simillar to throw new Exception(), but this step will avoid printing a stack trace.
