@@ -104,6 +104,9 @@ node{
     
     stage('stash-stage'){
         stash includes: 'sample.txt', name: 'stash1'
+        sleep time:1, units:'MINUTES'
+        unstash 'stash1'
+        
     }
     
     /*stage('clean'){
@@ -115,7 +118,7 @@ node{
         error 'Error'// simillar to throw new Exception(), but this step will avoid printing a stack trace.
     }*/
     
-    stage('retry'){
+    /*stage('retry'){
         try{
             build 'error-job'
         }
@@ -125,5 +128,5 @@ node{
                 build 'error-job'
             }
         }
-    }
+    }*/
 }
