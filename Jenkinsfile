@@ -1,9 +1,9 @@
 #!groovy
 
 node{
-    /*stage('Checkout'){
-            //git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
-    }*/
+    stage('Checkout'){
+            git credentialsID: 'vishwa-git', url: 'https://github.com/vishwa-m/MavenPrac_HelloWorld_Donot_Delete.git', branch: 'master'
+    }
     
     stage('Maven'){
             sh "/opt/apache-maven-3.5.0/bin/mvn -version"
