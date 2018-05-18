@@ -26,7 +26,7 @@ node{
     }
     
     stage('fileExists'){
-        if (fileExists('Notes/Readme.txt')) {
+        if (fileExists('sample.txt')) {
             echo 'Yes'
         } else {
             echo 'No'
