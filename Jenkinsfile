@@ -87,7 +87,7 @@ node{
         If no node is mentioned then by default it uses the default node.
         */
         
-        node('master'){         
+        node{         
                 build 'temp1'
         }
         
