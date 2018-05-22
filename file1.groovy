@@ -5,4 +5,6 @@ def firstTest(){
   //println("firstTest invoked");
 }
 
-//return this
+return [
+    firstTest: this.&firstTest,
+]
