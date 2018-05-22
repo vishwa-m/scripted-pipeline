@@ -119,7 +119,7 @@ node{
         }
         
         // Archive output/usefulfile.txt
-        archieveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'        
+        archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'        
     }
     
     /*stage('clean'){
