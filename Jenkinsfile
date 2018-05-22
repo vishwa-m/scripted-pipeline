@@ -119,6 +119,7 @@ node{
         }
         
         // Archive output/usefulfile.txt
+        // archiveArtifacts willn't do compression. It copies the mentioned files/artifacts to jobs/<jenkins job>/builds/<build num>/archive folder.
         archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'        
     }
     
