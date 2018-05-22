@@ -108,11 +108,6 @@ node{
         unstash 'stash1' // 'stash1' will be deleted
     }
     
-    stage('stage-invoke_groovyScripts'){
-        def externalMethod = load("file1.groovy")
-        externalMethod.firstTest()
-    }
-    
     /*stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
