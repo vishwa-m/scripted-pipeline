@@ -108,6 +108,20 @@ node{
         unstash 'stash1' // 'stash1' will be deleted
     }
     
+    stage('archival-stage'){
+        sh "mkdir -p output"
+        dir('output'){
+            // Write an useful file, which is needed to be archived.
+            writeFile file: 'usefulfile.txt', text:'This file is going to be archived'
+            
+            // Write an useless file, which is not needed to be archived.
+            writeFile file: 'uselessfile.md', text:'This file is not to be archived'
+        }
+        
+        // Archive output/usefulfile.txt
+        archieveArtifacts artifacts:'output/*.txt' excludes:'output/*.md'        
+    }
+    
     /*stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
