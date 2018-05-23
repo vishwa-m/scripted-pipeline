@@ -132,8 +132,8 @@ node{
         echo "${pom.artifactId}"
         echo "${pom.groupId}"
         echo "After updating the pom version details"
-        pom.version.replace("1.0", "1.1")
-        echo "${pom.version}"
+        def latestVersion=pom.version.replace("1.0", "1.1")
+        echo latestVersion
         
     }
     
