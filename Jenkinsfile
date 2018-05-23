@@ -123,6 +123,11 @@ node{
         archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'        
     }
     
+    stage('maven-version-stage'){
+        def pom = readMavenPom file: 'pom.xml'
+    
+    }
+    
     /*stage('clean'){
         sh "pwd"
         deleteDir()// It deletes the working directory of the current job
