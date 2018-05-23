@@ -127,9 +127,10 @@ node{
         
         /*** To use the below function, install pipeline-utility-steps Jenkins plugin ***/
         def pom = readMavenPom file: 'pom.xml'
-        echo "${pom}"
-        def version=pom.version
-        echo "$version"    
+        //echo "${pom}"
+        echo "${pom.version}"
+        echo "${pom.artifactId}"
+        echo "${pom.groupId}"
     }
     
     /*stage('clean'){
