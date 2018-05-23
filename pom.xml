@@ -5,5 +5,12 @@
 	<groupId>com.vnath.prac</groupId>
 	<artifactId>Helloworld</artifactId>
 	<version>1.0</version>
+	
+	<scm>
+	   <connection>scm:git:https://github.com/vishwa-m/scripted-pipeline.git</connection>
+	   <!--<url>http://github.com/user/project</url>
+	   <developerConnection>scm:git:https://github.com/user/project.git</developerConnection>
+	   -->
+	</scm>
 
 </project>
