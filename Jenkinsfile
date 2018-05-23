@@ -124,6 +124,8 @@ node{
     }
     
     stage('maven-version-stage'){
+        
+        /*** To use the below function, install pipeline-utility-steps Jenkins plugin ***/
         def pom = readMavenPom file: 'pom.xml'
     
     }
