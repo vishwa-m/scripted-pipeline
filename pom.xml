@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vnath.prac</groupId>
 	<artifactId>Helloworld</artifactId>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 	
 	<scm>
 	   <connection>scm:git:https://github.com/vishwa-m/scripted-pipeline.git</connection>
