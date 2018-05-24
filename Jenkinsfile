@@ -135,20 +135,21 @@ node{
         def latestVersion=pom.version.replace("1.0", "1.1")
         echo latestVersion
         
+        /*
         sh "git status"
         sh "git add ."
         sh "git commit -m 'added a file sample'"
-        echo "${BRANCH_NAME}"
+        */
+        
         //sh "git push origin -${}"
         
         //sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
         
-        /*sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} \
+        sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} \
             -DdevelopmentVersion=${pom.version}  \
             release:prepare \
             release:perform \
             -B"
-        */
         
         /*  sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} \
             -DdevelopmentVersion=${pom.version}  \
