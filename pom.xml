@@ -12,4 +12,11 @@
 	   <developerConnection>scm:git:https://github.com/vishwa-m/scripted-pipeline.git</developerConnection>
 	</scm>
 
+	<distributionManagement>
+	    <repository>
+	      <id>myRepoId</id>
+	      <name>myCompanyReporsitory</name>
+	      <url>ftp://repository.mycompany.com/repository</url>
+	    </repository>
+	</distributionManagement>
 </project>
