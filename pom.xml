@@ -8,9 +8,8 @@
 	
 	<scm>
 	   <connection>scm:git:https://github.com/vishwa-m/scripted-pipeline.git</connection>
-	   <!--<url>http://github.com/user/project</url>
-	   <developerConnection>scm:git:https://github.com/user/project.git</developerConnection>
-	   -->
+	   <url>https://github.com/vishwa-m/scripted-pipeline.git</url>
+	   <developerConnection>scm:git:https://github.com/vishwa-m/scripted-pipeline.git</developerConnection>
 	</scm>
 
 </project>
