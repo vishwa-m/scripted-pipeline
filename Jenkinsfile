@@ -137,7 +137,7 @@ node{
         
         sh "git status"
         sh "git add release.properties"
-        sh "commit -m 'added release.properties'"
+        sh "committ -m 'added release.properties'"
         echo "${BRANCH_NAME}"
         //sh "git push origin -${}"
         
