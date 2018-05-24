@@ -136,6 +136,10 @@ node{
         echo latestVersion
         
         sh "git status"
+        sh "git add release.properties"
+        sh "commit -m 'added release.properties'"
+        echo "${BRANCH_NAME}"
+        //sh "git push origin -${}"
         
         //sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} -DdevelopmentVersion=${pom.version} -DpushChanges=false -DlocalCheckout=true -DpreparationGoals=initialize release:prepare release:perform -B"
         
