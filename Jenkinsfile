@@ -137,7 +137,7 @@ node{
         
         sh "git status"
         sh "git add sample.txt"
-        sh "committ -m 'added a file sample'"
+        sh "commit -m 'added a file sample'"
         echo "${BRANCH_NAME}"
         //sh "git push origin -${}"
         
