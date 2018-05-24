@@ -139,9 +139,9 @@ node{
         
         sh "${maven}/bin/mvn -DreleaseVersion=${latestVersion} \
             -DdevelopmentVersion=${pom.version}  \
-            -DpushChanges=false \
-            -DlocalCheckout=true \
-            -DpreparationGoals=initialize \
+            //-DpushChanges=false \
+            //-DlocalCheckout=true \
+            //-DpreparationGoals=initialize \
             release:prepare \
             release:perform \
             -B"
